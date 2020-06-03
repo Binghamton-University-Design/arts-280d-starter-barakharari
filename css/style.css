@@ -1,1 +1,49 @@
 /*stylesheet*/
+
+/*
+
+Tiers of cascading styles
+(How do browsers resolce competing CSS styles)
+
+Importance - 
+1. Transition
+2. !important
+3. Animation
+4. Normal
+
+Origin - 
+1. Website
+2. User
+3. Browser
+
+Specificity -
+1. Inline (style="")
+2. ID
+3. Class
+4. Type
+
+Position -
+Top to bottom (in situations where you make the same declaration twice)
+
+*/
+
+body{
+	background-color: #e6e6e6;
+	color: #333333;
+}
+
+h1#main-headline{
+	font-size: 48px;
+	color: green;
+	font-weight: 800;
+}
+
+h1.main-headline{
+	font-size: 48px;
+	color: red;
+	font-weight: 800;
+}
+
+h1, h2, h3, h4{
+	margin: 0
+}
