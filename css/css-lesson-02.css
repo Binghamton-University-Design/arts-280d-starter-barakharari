@@ -24,7 +24,9 @@ h1{
 	margin-top: 3em;
 	margin-bottom: 3em;
 	max-width: 800px;
-	padding: 0 2em;
+	border-style: solid;
+	border-width: 0.5px;
+	border-color: #eeeeee;
 }
 
 #header{
