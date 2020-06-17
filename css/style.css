@@ -1,8 +1,11 @@
+  
 body {
   background-color: #ffffff;
   color: #333333;
-  font-family: 'Roboto';
+  font-family: 'Roboto Mono', monospace;
 }
+
+/*GENERAL*/
 
 h1, h2, h3, h4 {
   margin: 0;
@@ -31,6 +34,8 @@ h4 {
   padding: 0 2rem;
 }
 
+/*MASTHEAD*/
+
 #masthead, #main {
   margin-bottom: 2rem;
 }
@@ -56,9 +61,11 @@ h4 {
 
 #logo svg {
   margin-right: .25rem;
-  height: 1.6rem;
+  height: 3.6rem;
   width: auto;
 }
+
+/*NAV*/
 
 #nav a { 
 color: #000; 
@@ -68,7 +75,7 @@ text-decoration-color: transparent;
 display: inline-block; 
 width: 100%; 
 text-align: center; 
-transition: text-decoration-color .4s cubic-bezier(.694, .0482, .335, 1);
+transition: text-decoration-color .3s ease-in-out;
 }
 
 #nav a:hover { 
@@ -174,6 +181,79 @@ transition: text-decoration-color .4s cubic-bezier(.694, .0482, .335, 1);
     transform: rotate(-90deg);
     transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
+/*HOME*/
+
+#intro {
+  display: flex;
+  align-items: center;
+  height: 70vh;
+}
+
+#work h3 {
+  margin-bottom: 2rem;
+}
+
+.work-item {
+  overflow: hidden;
+  height: 0;
+  position: relative;
+  width: 100%; 
+  padding-top: calc((1 / 1) * 100%);
+  background-color: #000;
+}
+
+.work-item .inner {
+  text-decoration: none;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.work-item .inner .work-inside {
+  transition: opacity .3s ease-in-out;
+  opacity: 0;
+  color: #fff;
+  padding: 2rem;
+  width: 100%;
+  background-color:rgba(0,0,0,0.6);
+  text-align: right;
+}
+
+.work-item .inner:hover .work-inside {
+  opacity: 1;
+}
+
+.work-item img {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/*FOOTER*/
+
+#footer {
+  text-align: right;
+  font-size: .85rem;
+}
+
+/*RESPONSIVE*/
+
+/* for variable type sizing */
+@media screen and (min-width: 320px) {
+  body {
+    font-size: calc(12px + 4 * ((100vw - 320px) / 960));
+  }
+}
 
 @media all and (max-width: 699px) { 
   #nav-button {
@@ -181,6 +261,7 @@ transition: text-decoration-color .4s cubic-bezier(.694, .0482, .335, 1);
   }
   #nav {
     border-bottom: 1px solid #000;
+    padding-bottom: 1rem;
     display: none;
   }
   #nav li { 
@@ -188,8 +269,28 @@ transition: text-decoration-color .4s cubic-bezier(.694, .0482, .335, 1);
     flex-basis: 100%;
     margin-bottom: 1rem;
   } 
+  #intro-holder h1 {
+    font-size: 3.2rem
+  }
+
+  .work-item .inner .work-inside {
+    opacity: 1;
+  }
+
 }
 
 @media all and (min-width: 700px) {
 
+  #intro {
+    height: 70vh;
+  }
+
+  #intro-holder {
+    padding: 0 5em;
+  }
+
 }
+
+body {
+    font-size: 18px;
+  }
