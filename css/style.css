@@ -83,7 +83,7 @@ text-align: center;
 transition: text-decoration-color .3s ease-in-out;
 }
 
-#nav a:hover { 
+#nav a:hover, #nav a.active { 
   text-decoration-color: var(--body-color); 
 }
 
@@ -261,6 +261,28 @@ transition: text-decoration-color .3s ease-in-out;
   background-color: var(--body-color);
 }
 
+.music-item img{
+  display: block;
+  width: 100%
+  height: auto;
+}
+
+.music-item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.music-item .caption{
+  margin-top: .75rem;
+  margin-bottom: 1.5rem;
+  font-size: .75rem;
+  color: #666;
+  width: 100%;
+  display: inline-block;
+  text-align: right;
+}
+
 .music-item h2 a{
   color: var(--body-color);
   text-decoration-color: transparent;
@@ -274,7 +296,7 @@ transition: text-decoration-color .3s ease-in-out;
 
 /*PORTFOLIO*/
 
-#portfolio{
+#portfolio, #music{
   margin-top: 2rem;
 }
 
