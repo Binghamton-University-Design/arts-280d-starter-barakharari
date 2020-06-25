@@ -1,5 +1,5 @@
 :root{
-  --background-color: #fff;
+  --background-color: #f6f6f6;
   --body-color: #111;
 }
   
@@ -10,16 +10,49 @@ body {
   margin: 0px;
 }
 
+
 /*GENERAL*/
 
 .cover{
-  overflow: hidden;
-  width: 100%;
+  width: 50%;
   height: auto;
-  max-height: 600px;
+  min-width: 700px;
+  min-height: 1050px;
+  max-width: 1000px;
+  max-height: 1500px;
   position: absolute;
-  top: 0px;
 }
+
+.bottomleft{
+  bottom: 0px;
+  left: 0px;
+}
+
+.topleft{
+  top: 0px;
+  left: 0px;
+}
+
+.topright{
+  top: 0px;
+  right: 0px;
+}
+
+.bottomright{
+  bottom: 0px;
+  right: 0px;
+}
+
+.reverse{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.flip{
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+}
+
 
 h1, h2, h3, h4 {
   margin: 0;
@@ -42,6 +75,9 @@ h4 {
   font-size: 1rem;
 }
 
+#name{
+  margin-left: 1rem;
+}
 
 
 #wrapper {
@@ -84,14 +120,14 @@ h4 {
 /*NAV*/
 
 #nav a { 
-color: #000; 
-font-weight: 300; 
-letter-spacing: 2px; 
-text-decoration-color: transparent; 
-display: inline-block; 
-width: 100%; 
-text-align: center; 
-transition: text-decoration-color .3s ease-in-out;
+  color: #000; 
+  font-weight: 1000; 
+  letter-spacing: 2px; 
+  text-decoration-color: transparent; 
+  display: inline-block; 
+  width: 100%; 
+  text-align: center; 
+  transition: text-decoration-color .3s ease-in-out;
 }
 
 #nav a:hover, #nav a.active { 
@@ -271,6 +307,26 @@ transition: text-decoration-color .3s ease-in-out;
   height: 100%;
 }
 
+.musicinfo{
+  width: 80%;
+  margin-bottom: 2rem;
+}
+
+/*.music-item{
+  display: flex;
+  flex-direction: column;
+  min-height: 350px;
+  height: 100%;
+}
+
+.song{
+  align-items: flex-end;
+}*/
+
+.music-holder{
+  margin-bottom: 3rem;
+}
+
 .music-item .date-holder{
   margin-bottom: .25em;
 }
@@ -357,7 +413,8 @@ transition: text-decoration-color .3s ease-in-out;
   }
 }
 
-@media all and (max-width: 699px) { 
+@media all and (max-width: 900px) { 
+
   #nav-button {
     display: block;
   }
@@ -381,7 +438,7 @@ transition: text-decoration-color .3s ease-in-out;
 
 }
 
-@media all and (min-width: 700px) {
+@media all and (min-width: 901px) {
 
   #intro {
     height: 70vh;
@@ -390,9 +447,9 @@ transition: text-decoration-color .3s ease-in-out;
   #intro-holder {
     padding: 0 5em;
   }
+  body {
+    font-size: 18px;
+  }
 
 }
 
-body {
-    font-size: 18px;
-  }
