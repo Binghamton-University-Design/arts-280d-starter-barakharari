@@ -61,9 +61,9 @@
 
         <div id="work-holder" class="grid">
           <div class="width-12-12-m width-6-12 work-item">
-            <a class="inner" href="portfolio-projects/notsobasic.html" title="Not So Basic URLs">
+            <a class="inner" href="portfolio-projects/uncommon-urls.html" title="Uncommon URLs">
               <div class="work-inside">
-                <h2>Not so basic URLs</h2>
+                <h2>Uncommon URLs</h2>
                 <p>A website for finding domain names based on keywords</p>
               </div>
               <img src="images/1x1/1x1domainfinder.png">
